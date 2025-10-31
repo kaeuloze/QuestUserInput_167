@@ -1,8 +1,15 @@
 package com.example.userinput
 
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
-@Compasable
+
+@Composable
 
 fun FormDataDiri(modifier: Modifier
 ){
@@ -13,17 +20,17 @@ fun FormDataDiri(modifier: Modifier
     var textJK by remember {mutableStateOf("")}
 
     //variabel variabel untuk menyimpan data yg diperoleh dari komponen UI
-    var nama by remember {mutableSatteOf("")}
-    var alamat by remember {mutableSatteOf("")}
-    var jenis by remember {mutableSatteOf("")}
+    var nama by remember {mutableStateOf("")}
+    var alamat by remember {mutableStateOf("")}
+    var jenis by remember {mutableStateOf("")}
 
-    var gender:List<string> = listOf("Laki-laki", "Perempuan")
+    var gender:List<String> = listOf("Laki-laki", "Perempuan")
 
     Column(modifier = Modifier.padding(top = 58.dp),
         verticalArrangement = Arrangement.Top,
 
         horizontalAlignment = Alignment.CenterHorizontally){
-        OutLinedTextField(
+        OutlinedTextField(
             value = textNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
@@ -40,19 +47,21 @@ fun FormDataDiri(modifier: Modifier
 
             gender.forEach { item ->
                 Row(modifier = Modifier.selectable(
-                    selcetd = text.JK == item,
+                    selcetd = textJK == item,
 
-                    onClick = { text.JK = item}
+                    onClick = { textJK = item}
 
                 ), verticalAlignment = Alignment.CenterVertically){
                     RadioButton(
-                        selected = text.JK == item,,
+                        selected = textJK == item,
 
-                        onClick = { text.JK = item
+                        onClick = { textJK = item
                         })
                     Text(item)
                 }
             }
         }
+
+
     }
 }
