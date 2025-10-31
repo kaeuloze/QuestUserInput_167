@@ -76,15 +76,15 @@ fun FormDataDiri(modifier: Modifier
             label = { Text(text = "Alamat Lengkap")},
 
             onValueChange = {
-                textNama = it
+                textAlamat = it
             }
         )
 
-        divider(
+        Divider(
             modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
                 id = R.dimen.padding_medium
             )),
-            thickness = dimensionResource(R.dimen.divider_tipis),
+            thickness = dimensionResource(R.dimen.Divider_tipis),
             color = Color.DarkGray
         )
         Button(
@@ -102,11 +102,11 @@ fun FormDataDiri(modifier: Modifier
             Text(stringResource(R.string.submit))
         }
 
-        divider(
+        Divider(
             modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
                 id = R.dimen.padding_medium
             )),
-            thickness = dimensionResource(R.dimen.divider_tipis),
+            thickness = dimensionResource(R.dimen.Divider_tipis),
             color = Color.DarkGray
         )
 
