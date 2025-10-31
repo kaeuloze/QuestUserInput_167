@@ -81,5 +81,16 @@ fun FormDataDiri(modifier: Modifier
             thickness = dimensionResources(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
+        Buttom(
+            modifier = Modifier.fillMaxWidth(1f),
+            // the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+
+            onClick = {
+                nama=textNama
+                jenis=textJK
+                alamat=textAlamat
+            }
+        )
     }
 }
