@@ -16,4 +16,8 @@ fun FormDataDiri(modifier: Modifier
     var jenis by remember {mutableSatteOf("")}
 
     var gender:List<string> = listOf("Laki-laki", "Perempuan")
+
+    Column(modifier = Modifier.padding(top = 58.dp),
+
+        )
 }
