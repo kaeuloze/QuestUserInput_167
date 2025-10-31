@@ -18,6 +18,9 @@ fun FormDataDiri(modifier: Modifier
     var gender:List<string> = listOf("Laki-laki", "Perempuan")
 
     Column(modifier = Modifier.padding(top = 58.dp),
+        verticalArrangement = Arrangement.Top,
 
-        )
+        horizontalAlignment = Alignment.CenterHorizontally){
+
+    }
 }
