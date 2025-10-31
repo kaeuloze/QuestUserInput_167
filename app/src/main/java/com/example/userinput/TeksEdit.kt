@@ -7,6 +7,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.material3.Divider
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.graphics.Color
+
+
+
 
 
 @Composable
@@ -47,7 +55,7 @@ fun FormDataDiri(modifier: Modifier
 
             gender.forEach { item ->
                 Row(modifier = Modifier.selectable(
-                    selcetd = textJK == item,
+                    selected = textJK == item,
 
                     onClick = { textJK = item}
 
@@ -75,13 +83,13 @@ fun FormDataDiri(modifier: Modifier
         )
 
         divider(
-            modifier = Modifier.padding(bottom = dimensionResoource(R.dimen.padding_medium), top = dimensionResource(
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
                 id = R.dimen.padding_medium
             )),
-            thickness = dimensionResources(R.dimen.divider_tipis),
+            thickness = dimensionResource(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
-        Buttom(
+        Button(
             modifier = Modifier.fillMaxWidth(1f),
             // the button is enabled when the user makes a selection
             enabled = textAlamat.isNotEmpty(),
@@ -91,6 +99,16 @@ fun FormDataDiri(modifier: Modifier
                 jenis=textJK
                 alamat=textAlamat
             }
-        )
+
+        ){
+            Text(stringResource(R.string.submit))
+        }
+
+        divider(
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
+                id = R.dimen.padding_medium
+            )),
+            thickness = dimensionResource(R.dimen.divider_tipis),
+            color = Color.DarkGray
     }
 }
