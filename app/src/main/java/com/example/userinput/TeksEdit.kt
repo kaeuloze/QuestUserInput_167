@@ -1,5 +1,7 @@
 package com.example.userinput
 
+import androidx.compose.ui.unit.dp
+
 @Compasable
 
 fun FormDataDiri(modifier: Modifier
@@ -33,5 +35,17 @@ fun FormDataDiri(modifier: Modifier
                 textNama = it
             }
         )
+
+        Row{
+
+            gender.forEach { item ->
+                Row(modifier = Modifier.selectable(
+                    selcetd = text.JK == item,
+
+                    onClick = { text.JK = item}
+                )
+                )
+            }
+        }
     }
 }
