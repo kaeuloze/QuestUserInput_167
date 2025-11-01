@@ -43,7 +43,17 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             textAlign = TextAlign.Center,
             color = Color.White
         )
+        // Card utama yang membungkus form
+        ElevatedCard(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp),
+            elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White)
+        ) {
 
-    }
+        }
+
+        }
 
     }
