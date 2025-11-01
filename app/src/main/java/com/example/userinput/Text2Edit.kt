@@ -43,6 +43,8 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             textAlign = TextAlign.Center,
             color = Color.White
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
         // Card utama yang membungkus form
         ElevatedCard(
             modifier = Modifier
@@ -83,7 +85,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                                 onClick = { textJK = item }
                             ),
                         verticalAlignment = Alignment.CenterVertically
-                    ){
+                    ) {
                         RadioButton(
                             selected = textJK == item,
                             onClick = { textJK = item }
@@ -144,11 +146,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 ) {
                     Text(text = stringResource(id = R.string.submit))
                 }
-
             }
-
-            }
-
         }
-
     }
+}
