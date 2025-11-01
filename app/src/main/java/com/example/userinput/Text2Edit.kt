@@ -56,6 +56,11 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     .fillMaxWidth()
                     .padding(16.dp)
             ) {
+                // Input Nama
+                Text(
+                    text = "NAMA LENGKAP"
+                )
+
             }
 
             }
