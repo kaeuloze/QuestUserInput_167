@@ -74,8 +74,17 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 Text(
                     text = "JENIS KELAMIN"
                 )
-
-
+                gender.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ){}
+                }
             }
 
             }
