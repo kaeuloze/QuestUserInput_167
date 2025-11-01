@@ -133,7 +133,17 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     label = { Text(text = "Alamat") },
                     onValueChange = { textAlamat = it }
                 )
-
+                // Tombol Submit
+                Button(
+                    onClick = {},
+                    modifier = Modifier.fillMaxWidth(fraction = 1f),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Magenta,
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text(text = stringResource(id = R.string.submit))
+                }
 
             }
 
