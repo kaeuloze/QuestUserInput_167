@@ -32,6 +32,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             .padding(16.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {}
+    ) {
+        // Header Ungu
+        Text(
+            text = "Formulir Pendaftaran",
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color.Magenta)
+                .padding(top = 20.dp, bottom = 24.dp),
+            textAlign = TextAlign.Center,
+            color = Color.White
+        )
+
+    }
 
     }
