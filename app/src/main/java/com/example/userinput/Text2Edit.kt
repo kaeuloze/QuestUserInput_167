@@ -51,8 +51,14 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+            }
 
-        }
+            }
 
         }
 
