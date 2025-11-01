@@ -60,6 +60,16 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 Text(
                     text = "NAMA LENGKAP"
                 )
+                OutlinedTextField(
+                    value = textNama,
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.medium,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    label = { Text(text = "Isian nama lengkap") },
+                    onValueChange = { textNama = it }
+                )
 
             }
 
