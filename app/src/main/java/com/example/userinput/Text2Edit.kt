@@ -70,6 +70,11 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     label = { Text(text = "Isian nama lengkap") },
                     onValueChange = { textNama = it }
                 )
+                // Jenis Kelamin
+                Text(
+                    text = "JENIS KELAMIN"
+                )
+
 
             }
 
