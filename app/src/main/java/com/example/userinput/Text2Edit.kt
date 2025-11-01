@@ -119,6 +119,22 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.height(8.dp))
 
+                // Input Alamat
+                Text(
+                    text = "ALAMAT"
+                )
+                OutlinedTextField(
+                    value = textAlamat,
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.medium,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    label = { Text(text = "Alamat") },
+                    onValueChange = { textAlamat = it }
+                )
+
+
             }
 
             }
