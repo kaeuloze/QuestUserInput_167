@@ -20,4 +20,8 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
     var textStatus by remember { mutableStateOf("") }
+
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
+    val statusList: List<String> = listOf("Janda", "Lajang", "Duda")
+
 }
